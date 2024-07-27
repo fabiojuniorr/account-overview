@@ -50,7 +50,7 @@ export const SupportTitle = styled.p`
   font-size: 14px;
 `
 
-export const SupportContact = styled.p`
+export const SupportContacts = styled.p`
   display: flex;
   margin-top: 5px !important;
   font-size: 14px;
