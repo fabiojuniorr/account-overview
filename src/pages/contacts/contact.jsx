@@ -5,7 +5,7 @@ import {
   SupportEmail,
   SupportIcon,
   SupportInfo,
-  SupportTitle
+  SupportTitle, Title
 } from "./styles"
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -24,7 +24,7 @@ export const Contact  = ({ contact }) => {
 
   return (
       <Container>
-        <h5> Your feefo support contact </h5>
+        <Title> Your feefo support contact </Title>
         <SupportDetail>
           <SupportIcon>{getFirstLetterSupportName()}</SupportIcon>
           <SupportInfo>

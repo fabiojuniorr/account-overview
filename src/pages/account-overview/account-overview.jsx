@@ -1,16 +1,24 @@
 import React from 'react';
 
 import {Contact} from "../contacts/contact";
-import {Container, Title} from "./styles";
+import {Container, Content, Header, Title} from "./styles";
 import PropTypes from "prop-types";
+import Sale from "../sales/sale";
+import Statistic from "../statistics/statistic";
 
 export const AccountOverview = ({ data: { supportContact, salesOverview } }) => {
   console.log(supportContact, salesOverview);
 
   return (
     <Container>
-      <Title>Account Overview</Title>
-      <Contact contact={supportContact} />
+      <Header>
+        <Title>Account Overview</Title>
+        <Contact contact={supportContact} />
+      </Header>
+      <Content>
+        <Sale />
+        <Statistic />
+      </Content>
     </Container>
   )
 }
