@@ -11,7 +11,7 @@ export const Title = styled.div`
   color: #9f9f9f;
   font-weight: bold;
   font-size: 12px;
-  letter-spacing: 2px
+  letter-spacing: 1px
 `
 
 export const SupportDetail = styled.div`

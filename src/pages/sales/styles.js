@@ -2,14 +2,12 @@ import styled from "styled-components";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export const Container = styled.div`
-  border: 1px solid #e0e0e0;
-  border-radius: 5px;
-  padding: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  border-radius: 5px 5px 0 0;
   background-color: #fff;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 
   @media (max-width: 768px) {
     padding: 12px;
@@ -40,7 +38,7 @@ export const Upload = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
+  padding: 14px;
 
   @media (max-width: 768px) {
     flex-direction: row;
@@ -52,8 +50,8 @@ export const UploadDetails = styled.div`
   display: flex;
   align-items: flex-start;
   font-size: 14px;
-  margin-top: 8px;
   color: #5a5a5a;
+  padding: 0 14px 14px 14px;
 `
 
 export const BoldText = styled.span`
