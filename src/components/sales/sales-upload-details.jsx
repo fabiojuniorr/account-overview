@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const SalesUploadDetails = ({ salesOverview }) => {
   return (
-      <UploadDetails>
+      <UploadDetails data-testid="sales-upload-details">
         <p>You had <BoldText>{salesOverview.uploads} uploads</BoldText> and <BoldText>{salesOverview.linesSaved}</BoldText> lines added.</p>
       </UploadDetails>
   )

@@ -45,18 +45,20 @@ export const SalesUpload = ({salesOverview, onSalesOverviewChange}) => {
   };
 
   return (
-      <Box>
+      <Box data-testid="sales-upload">
         <div>
           <UploadIcon
               icon={faUpload}
               onClick={handleUploadClick}
               aria-label="Upload file"
+              data-testid="upload-icon"
           />
           <HiddenInput
               type="file"
               accept=".csv"
               ref={fileInputRef}
               onChange={handleOpenFile}
+              data-testid="file-input"
           />
           <Title>Sales</Title>
         </div>
