@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
-export const StatisticsBox = styled.div`
+export const Container = styled.div`
   display: flex;
   width: 100%;
   max-width: 700px;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+  }
 `
 
 export const Box = styled.div`
@@ -17,6 +21,14 @@ export const Box = styled.div`
   border-right: ${(props) => (props.leftRadius !== 0 ? '1px solid #e0e0e0' : 'none')};
   border-bottom-left-radius: ${props => `${props.leftRadius}px`};
   border-bottom-right-radius: ${props => `${props.rightRadius}px`};
+
+  @media (max-width: 768px) {
+    width: 100%;
+    border-right: none;
+    border-right: ${(props) => (props.leftRadius !== 0 ? '1px solid #e0e0e0' : 'none')};
+    border-bottom-left-radius: ${props => `${props.leftRadius}px`};
+    border-bottom-right-radius: ${props => `${props.rightRadius}px`};
+  }
 `
 
 export const Percentage = styled.div`

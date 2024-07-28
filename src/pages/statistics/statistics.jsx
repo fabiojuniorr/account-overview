@@ -1,9 +1,9 @@
-import {StatisticsBox} from "./styles";
+import {Container} from "./styles";
 import Statistic from "./statistic";
 
 export const Statistics = () => {
   return (
-      <StatisticsBox>
+      <Container>
           <Statistic
               title='Upload success'
               percent='0%'
@@ -16,7 +16,7 @@ export const Statistics = () => {
               leftRadius={0}
               rightRadius={5}
           />
-       </StatisticsBox>
+       </Container>
   )
 }
 

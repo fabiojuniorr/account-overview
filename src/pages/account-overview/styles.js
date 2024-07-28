@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: grid;
   justify-content: center;
   grid-template-rows: 1fr 1fr;
+  grid-template-columns: auto;
 `
 
 export const Title = styled.span`
@@ -17,8 +18,13 @@ export const Header = styled.div`
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    gap: 30px;
+  }
 `
 
 export const Content = styled.div`

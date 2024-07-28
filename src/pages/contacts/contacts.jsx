@@ -1,5 +1,5 @@
 import {
-  Container,
+  Container, MarginLeft,
   SupportContacts,
   SupportDetail,
   SupportEmail,
@@ -32,9 +32,11 @@ export const Contacts  = ({ contact }) => {
               {contact.name}
             </SupportTitle>
             <SupportContacts>
-              <FontAwesomeIcon icon={faEnvelope} />
               <SupportEmail>
-                {contact.email}
+                <FontAwesomeIcon icon={faEnvelope} />
+                <MarginLeft ml={10}>
+                  <span>{contact.email}</span>
+                </MarginLeft>
               </SupportEmail>
               <span>{contact.phone}</span>
             </SupportContacts>

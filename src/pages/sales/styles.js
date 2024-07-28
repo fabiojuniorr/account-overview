@@ -10,8 +10,7 @@ export const Container = styled.div`
   margin: auto;
 
   @media (max-width: 768px) {
-    padding: 12px;
-    width: 80%;
+    width: 100%;
   }
 `
 
