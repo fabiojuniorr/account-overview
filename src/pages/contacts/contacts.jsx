@@ -12,7 +12,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import PropTypes from "prop-types";
 
-export const Contact  = ({ contact }) => {
+export const Contacts  = ({ contact }) => {
   console.log(contact)
 
   const getFirstLetterSupportName = () => {
@@ -44,7 +44,7 @@ export const Contact  = ({ contact }) => {
   );
 };
 
-Contact.propTypes = {
+Contacts.propTypes = {
   contact: PropTypes.shape({
     name: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
@@ -52,4 +52,4 @@ Contact.propTypes = {
   }).isRequired
 };
 
-export default Contact;
+export default Contacts;

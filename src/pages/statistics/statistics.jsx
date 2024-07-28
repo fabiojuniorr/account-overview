@@ -1,6 +1,6 @@
 import {Container} from "./styles";
 
-export const Statistic = () => {
+export const Statistics = () => {
   return (
       <Container>
         Statistic
@@ -8,4 +8,4 @@ export const Statistic = () => {
   )
 }
 
-export default Statistic;
+export default Statistics;

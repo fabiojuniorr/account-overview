@@ -1,10 +1,10 @@
 import React from 'react';
 
-import {Contact} from "../contacts/contact";
+import {Contacts} from "../contacts/contacts";
 import {Container, Content, Header, Title} from "./styles";
 import PropTypes from "prop-types";
-import Sale from "../sales/sale";
-import Statistic from "../statistics/statistic";
+import Sales from "../sales/sales";
+import Statistics from "../statistics/statistics";
 
 export const AccountOverview = ({ data: { supportContact, salesOverview } }) => {
   console.log(supportContact, salesOverview);
@@ -13,11 +13,11 @@ export const AccountOverview = ({ data: { supportContact, salesOverview } }) => 
     <Container>
       <Header>
         <Title>Account Overview</Title>
-        <Contact contact={supportContact} />
+        <Contacts contact={supportContact} />
       </Header>
       <Content>
-        <Sale />
-        <Statistic />
+        <Sales />
+        <Statistics />
       </Content>
     </Container>
   )
