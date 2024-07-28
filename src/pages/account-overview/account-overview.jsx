@@ -6,9 +6,7 @@ import PropTypes from "prop-types";
 import Sales from "../sales/sales";
 import Statistics from "../statistics/statistics";
 
-export const AccountOverview = ({ data: { supportContact, salesOverview } }) => {
-  console.log(supportContact, salesOverview);
-
+export const AccountOverview = ({ data: { supportContact, salesOverview }, onSalesOverviewChange }) => {
   return (
     <Container>
       <Header>
@@ -16,8 +14,8 @@ export const AccountOverview = ({ data: { supportContact, salesOverview } }) => 
         <Contacts contact={supportContact} />
       </Header>
       <Content>
-        <Sales />
-        <Statistics />
+        <Sales salesOverview={salesOverview} onSalesOverviewChange={onSalesOverviewChange} />
+        <Statistics salesOverview={salesOverview} />
       </Content>
     </Container>
   )
@@ -38,6 +36,7 @@ AccountOverview.propTypes = {
       lastUploadDate: PropTypes.number,
     }),
   }).isRequired,
+  onSalesOverviewChange: PropTypes.func.isRequired,
 };
 
 export default AccountOverview;

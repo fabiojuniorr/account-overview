@@ -1,26 +1,39 @@
 import './app.css';
 import AccountOverview from './pages/account-overview/account-overview';
+import {useState} from "react";
+
+const accountOverviewStub = {
+  supportContact: {
+    name: 'John Smith',
+    email: 'john.smith@feefo.com',
+    phone: '020 3362 4208'
+  },
+  salesOverview: {
+    uploads: 0,
+    successfulUploads: 0,
+    linesAttempted: 0,
+    linesSaved: 0,
+    lastUploadDate: 0,
+  }
+}
 
 function App() {
-  const accountOverviewStub = {
-    supportContact: {
-      name: 'John Smith',
-      email: 'john.smith@feefo.com',
-      phone: '020 3362 4208'
-    },
-    salesOverview: {
-      uploads: 8,
-      successfulUploads: 3,
-      linesAttempted: 20,
-      linesSaved: 4,
-      lastUploadDate: 1605001226079,
-    }
-  }
 
+  const [accountOverview, setAccountOverview] = useState(accountOverviewStub);
+
+  const setSalesOverview = (newSalesOverview) => {
+    setAccountOverview(prevState => ({
+      ...prevState,
+      salesOverview: newSalesOverview
+    }));
+  };
 
   return (
     <div className="App">
-      <AccountOverview data={accountOverviewStub}/>
+      <AccountOverview
+          data={accountOverview}
+          onSalesOverviewChange={setSalesOverview}
+      />
     </div>
   );
 }
