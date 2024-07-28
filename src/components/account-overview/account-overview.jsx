@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Contacts} from "../contacts/contacts";
+import {Contact} from "../contacts/contact";
 import {Container, Content, Header, Title} from "./styles";
 import PropTypes from "prop-types";
 import Sales from "../sales/sales";
@@ -11,7 +11,7 @@ export const AccountOverview = ({ data: { supportContact, salesOverview }, onSal
     <Container>
       <Header>
         <Title>Account Overview</Title>
-        <Contacts contact={supportContact} />
+        <Contact contact={supportContact} />
       </Header>
       <Content>
         <Sales salesOverview={salesOverview} onSalesOverviewChange={onSalesOverviewChange} />

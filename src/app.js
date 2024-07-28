@@ -1,5 +1,5 @@
 import './app.css';
-import AccountOverview from './pages/account-overview/account-overview';
+import AccountOverview from './components/account-overview/account-overview';
 import {useState} from "react";
 
 const accountOverviewStub = {
