@@ -33,7 +33,7 @@ export const Title = styled.span`
   font-weight: bold;
 `
 
-export const Upload = styled.div`
+export const Box = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
