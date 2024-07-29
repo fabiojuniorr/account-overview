@@ -50,8 +50,8 @@ export const SalesUpload = ({salesOverview, onSalesOverviewChange}) => {
           <UploadIcon
               icon={faUpload}
               onClick={handleUploadClick}
-              aria-label="Upload file"
               data-testid="upload-icon"
+              aria-label="Upload file"
           />
           <HiddenInput
               type="file"
@@ -59,23 +59,26 @@ export const SalesUpload = ({salesOverview, onSalesOverviewChange}) => {
               ref={fileInputRef}
               onChange={handleOpenFile}
               data-testid="file-input"
+              aria-label="Select CSV file to upload"
           />
           <Title>Sales</Title>
         </div>
-        <FontAwesomeIcon icon={faInfoCircle} color='#bfbbbb' aria-label="Info"/>
+        <FontAwesomeIcon
+            icon={faInfoCircle}
+            color='#bfbbbb'
+            aria-label="Information about file upload"
+        />
       </Box>
   )
 }
 
 SalesUpload.propTypes = {
   salesOverview: PropTypes.shape({
-    salesOverview: PropTypes.shape({
-      uploads: PropTypes.number,
-      successfulUploads: PropTypes.number,
-      linesAttempted: PropTypes.number,
-      linesSaved: PropTypes.number,
-      lastUploadDate: PropTypes.number,
-    })
+    uploads: PropTypes.number,
+    successfulUploads: PropTypes.number,
+    linesAttempted: PropTypes.number,
+    linesSaved: PropTypes.number,
+    lastUploadDate: PropTypes.number,
   }).isRequired,
   onSalesOverviewChange: PropTypes.func.isRequired,
 };

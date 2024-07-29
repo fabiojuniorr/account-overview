@@ -25,14 +25,16 @@ export const Contact  = ({ contact }) => {
       <Container>
         <Title> Your feefo support contact </Title>
         <SupportDetail>
-          <SupportIcon>{getFirstLetterSupportName()}</SupportIcon>
+          <SupportIcon aria-label="Support contact initials name">
+            {getFirstLetterSupportName()}
+          </SupportIcon>
           <SupportInfo>
             <SupportTitle>
               {contact.name}
             </SupportTitle>
             <SupportContacts>
               <SupportEmail>
-                <FontAwesomeIcon icon={faEnvelope} />
+                <FontAwesomeIcon icon={faEnvelope} aria-hidden="true" />
                 <MarginLeft ml={10}>
                   <span>{contact.email}</span>
                 </MarginLeft>

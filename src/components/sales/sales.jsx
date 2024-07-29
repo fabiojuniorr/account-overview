@@ -11,21 +11,20 @@ const Sales = ({salesOverview, onSalesOverviewChange}) => {
             salesOverview={salesOverview}
             onSalesOverviewChange={onSalesOverviewChange}
         />
-
-        <SalesUploadDetails salesOverview={salesOverview} />
+        <SalesUploadDetails
+            salesOverview={salesOverview}
+        />
       </Container>
   );
 }
 
 Sales.propTypes = {
   salesOverview: PropTypes.shape({
-    salesOverview: PropTypes.shape({
-      uploads: PropTypes.number,
-      successfulUploads: PropTypes.number,
-      linesAttempted: PropTypes.number,
-      linesSaved: PropTypes.number,
-      lastUploadDate: PropTypes.number,
-    })
+    uploads: PropTypes.number,
+    successfulUploads: PropTypes.number,
+    linesAttempted: PropTypes.number,
+    linesSaved: PropTypes.number,
+    lastUploadDate: PropTypes.number,
   }).isRequired,
   onSalesOverviewChange: PropTypes.func.isRequired,
 };

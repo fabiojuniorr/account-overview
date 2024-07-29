@@ -11,13 +11,11 @@ export const SalesUploadDetails = ({ salesOverview }) => {
 
 SalesUploadDetails.propTypes = {
   salesOverview: PropTypes.shape({
-    salesOverview: PropTypes.shape({
-      uploads: PropTypes.number,
-      successfulUploads: PropTypes.number,
-      linesAttempted: PropTypes.number,
-      linesSaved: PropTypes.number,
-      lastUploadDate: PropTypes.number,
-    })
+    uploads: PropTypes.number.isRequired,
+    successfulUploads: PropTypes.number,
+    linesAttempted: PropTypes.number,
+    linesSaved: PropTypes.number.isRequired,
+    lastUploadDate: PropTypes.number,
   }).isRequired,
 };
 

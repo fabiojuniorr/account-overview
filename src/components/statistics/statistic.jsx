@@ -10,11 +10,16 @@ export const Statistic = ({title, percent, leftRadius, rightRadius}) => {
   )
 }
 
-Statistic.prototype = {
+Statistic.propTypes = {
   title: PropTypes.string.isRequired,
   percent: PropTypes.string.isRequired,
   leftRadius: PropTypes.number,
   rightRadius: PropTypes.number,
-}
+};
+
+Statistic.defaultProps = {
+  leftRadius: 0,
+  rightRadius: 0,
+};
 
 export default Statistic;

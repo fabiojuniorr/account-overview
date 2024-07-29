@@ -14,7 +14,7 @@ export const Title = styled.span`
   justify-items: start;
 `
 
-export const Header = styled.div`
+export const Header = styled.header`
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr 1fr;
@@ -27,7 +27,7 @@ export const Header = styled.div`
   }
 `
 
-export const Content = styled.div`
+export const Content = styled.section`
   display: grid;
   grid-template-rows: 1fr 1fr;
   justify-items: start;

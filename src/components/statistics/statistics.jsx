@@ -16,6 +16,7 @@ export const Statistics = ({salesOverview}) => {
               leftRadius={5}
               rightRadius={0}
               data-testid="upload-success-statistic"
+              aria-label="Upload success percentage"
           />
           <Statistic
               title='Lines saved'
@@ -23,6 +24,7 @@ export const Statistics = ({salesOverview}) => {
               leftRadius={0}
               rightRadius={5}
               data-testid="lines-saved-statistic"
+              aria-label="Lines saved percentage"
           />
        </Container>
   )
@@ -30,14 +32,12 @@ export const Statistics = ({salesOverview}) => {
 
 Statistics.propTypes = {
   salesOverview: PropTypes.shape({
-    salesOverview: PropTypes.shape({
-      uploads: PropTypes.number,
-      successfulUploads: PropTypes.number,
-      linesAttempted: PropTypes.number,
-      linesSaved: PropTypes.number,
-      lastUploadDate: PropTypes.number,
-    })
-  }).isRequired
+    uploads: PropTypes.number.isRequired,
+    successfulUploads: PropTypes.number.isRequired,
+    linesAttempted: PropTypes.number.isRequired,
+    linesSaved: PropTypes.number.isRequired,
+    lastUploadDate: PropTypes.number,
+  }).isRequired,
 };
 
 export default Statistics;
