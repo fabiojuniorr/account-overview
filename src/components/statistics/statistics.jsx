@@ -9,18 +9,20 @@ export const Statistics = ({salesOverview}) => {
   const percentLinesSaved = linesAttempted > 0 ? ((linesSaved / linesAttempted) * 100).toFixed(1) : '0.0';
 
   return (
-      <Container>
+      <Container data-testid='statistics'>
           <Statistic
               title='Upload success'
               percent={`${percentUploadSucess}%`}
               leftRadius={5}
               rightRadius={0}
+              data-testid="upload-success-statistic"
           />
           <Statistic
               title='Lines saved'
               percent={`${percentLinesSaved}%`}
               leftRadius={0}
               rightRadius={5}
+              data-testid="lines-saved-statistic"
           />
        </Container>
   )
